@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Suggestion;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Suggestion
+ *
+ * Manage API Suggestions
+ * */
+
+
 class SuggestionController extends Controller
 {
     /**

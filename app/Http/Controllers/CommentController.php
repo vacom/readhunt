@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Comment;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Comments
+ *
+ * Manage API Comments
+ * */
+
 class CommentController extends Controller
 {
     /**

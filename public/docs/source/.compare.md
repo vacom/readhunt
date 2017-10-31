@@ -17,327 +17,11 @@ toc_footers:
 
 Welcome to the generated API reference.
 [Get Postman Collection](http://localhost/docs/collection.json)
-
 <!-- END_INFO -->
 
-#general
-<!-- START_b2892eb191cd19c0a6f1aae56ba43db4 -->
-## Display a listing of the resource.
+#Article
 
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/user" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-[
-    {
-        "id": 1,
-        "name": "Vitor Amaral",
-        "email": "amaralvitor@ua.pt",
-        "created_at": "2017-10-31 19:52:34",
-        "updated_at": "2017-10-31 19:52:34"
-    }
-]
-```
-
-### HTTP Request
-`GET api/v1/user`
-
-`HEAD api/v1/user`
-
-
-<!-- END_b2892eb191cd19c0a6f1aae56ba43db4 -->
-
-<!-- START_b77cc60ec781668eff0888aa705fd258 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/user/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/user/create`
-
-`HEAD api/v1/user/create`
-
-
-<!-- END_b77cc60ec781668eff0888aa705fd258 -->
-
-<!-- START_96b8840d06e94c53a87e83e9edfb44eb -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/user" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/user`
-
-
-<!-- END_96b8840d06e94c53a87e83e9edfb44eb -->
-
-<!-- START_eda2b3d78b052ccb36bffab3b344d72a -->
-## Display the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/user/{user}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user/{user}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/user/{user}`
-
-`HEAD api/v1/user/{user}`
-
-
-<!-- END_eda2b3d78b052ccb36bffab3b344d72a -->
-
-<!-- START_f5dcd1a863721e6fed25439283ccab97 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/user/{user}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user/{user}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/user/{user}/edit`
-
-`HEAD api/v1/user/{user}/edit`
-
-
-<!-- END_f5dcd1a863721e6fed25439283ccab97 -->
-
-<!-- START_1006d782d67bb58039bde349972eb2f0 -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/user/{user}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user/{user}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/user/{user}`
-
-`PATCH api/v1/user/{user}`
-
-
-<!-- END_1006d782d67bb58039bde349972eb2f0 -->
-
-<!-- START_a5d7655acadc1b6c97d48e68f1e87be9 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/user/{user}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/user/{user}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/user/{user}`
-
-
-<!-- END_a5d7655acadc1b6c97d48e68f1e87be9 -->
-
-<!-- START_28e685420b0e7112e74031353ec2f4bd -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/me" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/me",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/me`
-
-`HEAD api/v1/me`
-
-
-<!-- END_28e685420b0e7112e74031353ec2f4bd -->
-
+Manage API Articles
 <!-- START_e31e82ea4910f112a22dcc85c27efc99 -->
 ## Display a listing of the resource.
 
@@ -965,6 +649,53 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_e0cfb58dbc3b6bf2b2cbe777da3ea70f -->
 
+<!-- START_0024aa209a84866d387e35cc1802ea70 -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/articles" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/articles",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "error": false,
+    "msg": "All the articles",
+    "data": []
+}
+```
+
+### HTTP Request
+`GET api/v1/articles`
+
+`HEAD api/v1/articles`
+
+
+<!-- END_0024aa209a84866d387e35cc1802ea70 -->
+
+#Category
+
+Manage API Categories
 <!-- START_58c1a1a3acbe1c426bcb05e833a1d4f1 -->
 ## Display a listing of the resource.
 
@@ -1592,6 +1323,49 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_6a1a0789d7f1fd66545b46c16f81e028 -->
 
+<!-- START_bdd3ccf7db9f96843f0bb3617eac0164 -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/categories" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/categories",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/v1/categories`
+
+`HEAD api/v1/categories`
+
+
+<!-- END_bdd3ccf7db9f96843f0bb3617eac0164 -->
+
+#Comments
+
+Manage API Comments
 <!-- START_5c1d0fb8d8c1b014ffca8d77d93efff7 -->
 ## Display a listing of the resource.
 
@@ -1861,6 +1635,49 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_be929c59dc06593dc6ab34e11c799e17 -->
 
+<!-- START_94fa92618bb02ddc69477222dc6ec4e0 -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/comments/{article_id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/comments/{article_id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/v1/comments/{article_id}`
+
+`HEAD api/v1/comments/{article_id}`
+
+
+<!-- END_94fa92618bb02ddc69477222dc6ec4e0 -->
+
+#Profile
+
+Manage API Profiles
 <!-- START_af851f4cd1f0d32874a712f3319295e6 -->
 ## Display a listing of the resource.
 
@@ -2488,6 +2305,52 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_35584c51bf495bc7b7e4767e2aa52cab -->
 
+#Search
+
+Manage API Search
+<!-- START_aa6f432f2552c6aeb47833293fa5e6eb -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/search/{terms}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/search/{terms}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/v1/search/{terms}`
+
+`HEAD api/v1/search/{terms}`
+
+
+<!-- END_aa6f432f2552c6aeb47833293fa5e6eb -->
+
+#Suggestion
+
+Manage API Suggestions
 <!-- START_b69aa844ac4e52fc70aa51c9457a84e5 -->
 ## Display a listing of the resource.
 
@@ -2757,6 +2620,349 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_1ffde22beb6c8edf64b0bdecc663efff -->
 
+#User
+
+Manage API Users
+<!-- START_b2892eb191cd19c0a6f1aae56ba43db4 -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/user" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "error": false,
+    "msg": "All the users",
+    "data": [
+        {
+            "id": 1,
+            "name": "Vitor Amaral",
+            "email": "amaralvitor@ua.pt",
+            "created_at": "2017-10-31 19:52:34",
+            "updated_at": "2017-10-31 19:52:34"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/user`
+
+`HEAD api/v1/user`
+
+
+<!-- END_b2892eb191cd19c0a6f1aae56ba43db4 -->
+
+<!-- START_b77cc60ec781668eff0888aa705fd258 -->
+## Show the form for creating a new resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/user/create" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user/create",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/user/create`
+
+`HEAD api/v1/user/create`
+
+
+<!-- END_b77cc60ec781668eff0888aa705fd258 -->
+
+<!-- START_96b8840d06e94c53a87e83e9edfb44eb -->
+## Store a newly created resource in storage.
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/v1/user" \
+-H "Accept: application/json" \
+    -d "name"="qui" \
+    -d "email"="muller.ocie@example.org" \
+    -d "password"="qui" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user",
+    "method": "POST",
+    "data": {
+        "name": "qui",
+        "email": "muller.ocie@example.org",
+        "password": "qui"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | Maximum: `20` Minimum: `5`
+    email | email |  required  | Maximum: `150`
+    password | string |  required  | Minimum: `10` Required if the parameters `email` are present.
+
+<!-- END_96b8840d06e94c53a87e83e9edfb44eb -->
+
+<!-- START_eda2b3d78b052ccb36bffab3b344d72a -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/user/{user}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user/{user}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/user/{user}`
+
+`HEAD api/v1/user/{user}`
+
+
+<!-- END_eda2b3d78b052ccb36bffab3b344d72a -->
+
+<!-- START_f5dcd1a863721e6fed25439283ccab97 -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/user/{user}/edit" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user/{user}/edit",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/user/{user}/edit`
+
+`HEAD api/v1/user/{user}/edit`
+
+
+<!-- END_f5dcd1a863721e6fed25439283ccab97 -->
+
+<!-- START_1006d782d67bb58039bde349972eb2f0 -->
+## Update the specified resource in storage.
+
+> Example request:
+
+```bash
+curl -X PUT "http://localhost/api/v1/user/{user}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user/{user}",
+    "method": "PUT",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`PUT api/v1/user/{user}`
+
+`PATCH api/v1/user/{user}`
+
+
+<!-- END_1006d782d67bb58039bde349972eb2f0 -->
+
+<!-- START_a5d7655acadc1b6c97d48e68f1e87be9 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE "http://localhost/api/v1/user/{user}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/user/{user}",
+    "method": "DELETE",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`DELETE api/v1/user/{user}`
+
+
+<!-- END_a5d7655acadc1b6c97d48e68f1e87be9 -->
+
+<!-- START_28e685420b0e7112e74031353ec2f4bd -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/me" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/me",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/me`
+
+`HEAD api/v1/me`
+
+
+<!-- END_28e685420b0e7112e74031353ec2f4bd -->
+
+#Vote
+
+Manage API Votes
 <!-- START_9e978e571c2e81dbee8454eac921fd26 -->
 ## Display a listing of the resource.
 
@@ -3026,126 +3232,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_5c0378ac9c14a934f7b53d9aaea8b0ef -->
 
-<!-- START_0024aa209a84866d387e35cc1802ea70 -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/articles" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/articles",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/articles`
-
-`HEAD api/v1/articles`
-
-
-<!-- END_0024aa209a84866d387e35cc1802ea70 -->
-
-<!-- START_bdd3ccf7db9f96843f0bb3617eac0164 -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/categories" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/categories",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/categories`
-
-`HEAD api/v1/categories`
-
-
-<!-- END_bdd3ccf7db9f96843f0bb3617eac0164 -->
-
-<!-- START_94fa92618bb02ddc69477222dc6ec4e0 -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/comments/{article_id}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/comments/{article_id}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/comments/{article_id}`
-
-`HEAD api/v1/comments/{article_id}`
-
-
-<!-- END_94fa92618bb02ddc69477222dc6ec4e0 -->
-
 <!-- START_d362bbc48ab18177031f185222ae2ecd -->
 ## Display the specified resource.
 
@@ -3185,44 +3271,4 @@ null
 
 
 <!-- END_d362bbc48ab18177031f185222ae2ecd -->
-
-<!-- START_aa6f432f2552c6aeb47833293fa5e6eb -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/search/{terms}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/search/{terms}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/search/{terms}`
-
-`HEAD api/v1/search/{terms}`
-
-
-<!-- END_aa6f432f2552c6aeb47833293fa5e6eb -->
 

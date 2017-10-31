@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Search;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Search
+ *
+ * Manage API Search
+ * */
+
+
 class SearchController extends Controller
 {
     /**

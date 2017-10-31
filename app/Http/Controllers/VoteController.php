@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Vote;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Vote
+ *
+ * Manage API Votes
+ * */
+
+
 class VoteController extends Controller
 {
     /**

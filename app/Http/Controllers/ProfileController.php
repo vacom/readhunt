@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Profile;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Profile
+ *
+ * Manage API Profiles
+ * */
+
+
 class ProfileController extends Controller
 {
     /**
