@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -16,17 +18,25 @@ use Illuminate\Support\Facades\Validator;
 class ArticleController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all the articles from the database.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return response(array(
-            'error' => false,
-            'msg' => 'All the articles',
-            'data' => Article::all()
-        ), 200);
+        $articles = Article::all();
+        if($articles){
+            return response(array(
+                'error' => false,
+                'msg' => 'All the Articles',
+                'data' => $articles
+            ), 200);
+        }else{
+            return response(array(
+                'error' => true,
+                'msg' => 'Articles not found',
+            ), 404);
+        }
     }
 
     /**
@@ -40,7 +50,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Creates a newly article in the database.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -48,10 +58,14 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required|max:150|min:10',
-            'subtitle' => 'required|max:50',
-            'description' => 'required|min:50',
-            'user_id' => 'required',
+            'title' => 'required|max:150|min:5|string',
+            'tagline' => 'required|max:50|string',
+            'description' => 'nullable|min:50|string',
+            'link' => 'nullable|max:150',
+            'thumbnail_url' => 'required|nullable|max:150',
+            'cover_url' => 'nullable|max:150',
+            'user_id' => 'required|integer',
+            'category_id' => 'required|integer',
         ]);
 
         if ($validator->fails()) {
@@ -64,26 +78,43 @@ class ArticleController extends Controller
 
         $data = $request->all();
         $saved = Article::create($data);
-        return response(array(
-            'error' => false,
-            'msg' => 'Article successfully created',
-            'data' => $saved
-        ), 200);
+        //checks if it was saved on the DB
+        if($saved){
+            return response(array(
+                'error' => false,
+                'msg' => 'Article successfully created',
+                'data' => $saved
+            ), 200);
+        }else{
+            return response(array(
+                'error' => true,
+                'msg' => 'The article was not created',
+            ), 400);
+        }
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified article by id.
      *
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
     public function show(Article $article)
     {
-        return response(array(
-            'error' => false,
-            'msg' => 'Article successfully collected',
-            'data' => $article
-        ), 200);
+        try {
+            return response(array(
+                'error' => false,
+                'msg' => 'Article successfully collected',
+                'data' => $article
+            ), 200);
+        }
+        catch (ModelNotFoundException $e)
+        {
+            return response(array(
+                'error' => true,
+                'msg' => 'Article not found',
+            ), 404);
+        }
     }
 
     /**
@@ -98,7 +129,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified article by id in database.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Article  $article
@@ -108,10 +139,14 @@ class ArticleController extends Controller
     {
         if($article->user_id === Auth::id()){
             $validator = Validator::make($request->all(), [
-                'title' => 'max:150|min:10',
-                'subtitle' => 'max:50',
-                'description' => 'nullable|min:50',
-                'user_id' => 'max:50',
+                'title' => 'required|max:150|min:5|string',
+                'tagline' => 'required|max:50|string',
+                'description' => 'nullable|min:50|string',
+                'link' => 'nullable|max:150',
+                'thumbnail_url' => 'required|nullable|max:150',
+                'cover_url' => 'nullable|max:150',
+                'user_id' => 'required|integer',
+                'category_id' => 'required|integer',
             ]);
 
             if ($validator->fails()) {
@@ -125,11 +160,19 @@ class ArticleController extends Controller
             $data = $request->all();
             //$data = $request->only('title');
             $article->update($data);
-            return response(array(
-                'error' => false,
-                'msg' => 'Article successfully updated',
-                'data' => $data
-            ), 200);
+            //checks if it was updated
+            if($article){
+                return response(array(
+                    'error' => false,
+                    'msg' => 'Article successfully updated',
+                    'data' => $article
+                ), 200);
+            }else{
+                return response(array(
+                    'error' => true,
+                    'msg' => 'Something went wrong!',
+                ), 401);
+            }
         }else {
             return response(array(
                 'error' => true,
@@ -139,17 +182,24 @@ class ArticleController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified article by id from database.
      *
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
     public function destroy(Article $article)
     {
-        $article->delete();
-        return response(array(
-            'error' => false,
-            'msg' => 'Article successfully deleted',
-        ), 200);
+        $deleted = $article->delete();
+        if($deleted){
+            return response(array(
+                'error' => false,
+                'msg' => 'Article successfully deleted',
+            ), 200);
+        }else{
+            return response(array(
+                'error' => true,
+                'msg' => 'Article was not deleted',
+            ), 404);
+        }
     }
 }

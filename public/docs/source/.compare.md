@@ -842,367 +842,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "No query results for model [App\\Category].",
-    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
-    "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
-    "line": 199,
-    "trace": [
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
-            "line": 175,
-            "function": "prepareException",
-            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/app\/Exceptions\/Handler.php",
-            "line": 51,
-            "function": "render",
-            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 83,
-            "function": "render",
-            "class": "App\\Exceptions\\Handler",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 55,
-            "function": "handleException",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php",
-            "line": 57,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 102,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
-            "line": 647,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
-            "line": 622,
-            "function": "runRouteWithinStack",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
-            "line": 588,
-            "function": "runRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
-            "line": 577,
-            "function": "dispatchToRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
-            "line": 176,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 30,
-            "function": "Illuminate\\Foundation\\Http\\{closure}",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/fideloper\/proxy\/src\/TrustProxies.php",
-            "line": 56,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Fideloper\\Proxy\\TrustProxies",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
-            "line": 30,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
-            "line": 30,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php",
-            "line": 27,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/CheckForMaintenanceMode.php",
-            "line": 46,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 149,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
-            "line": 102,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
-            "line": 151,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
-            "line": 116,
-            "function": "sendRequestThroughRouter",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Mpociot\/ApiDoc\/Generators\/LaravelGenerator.php",
-            "line": 116,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Mpociot\/ApiDoc\/Generators\/AbstractGenerator.php",
-            "line": 98,
-            "function": "callRoute",
-            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Mpociot\/ApiDoc\/Generators\/LaravelGenerator.php",
-            "line": 58,
-            "function": "getRouteResponse",
-            "class": "Mpociot\\ApiDoc\\Generators\\AbstractGenerator",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Mpociot\/ApiDoc\/Commands\/GenerateDocumentation.php",
-            "line": 261,
-            "function": "processRoute",
-            "class": "Mpociot\\ApiDoc\\Generators\\LaravelGenerator",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Mpociot\/ApiDoc\/Commands\/GenerateDocumentation.php",
-            "line": 83,
-            "function": "processLaravelRoutes",
-            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
-            "type": "->"
-        },
-        {
-            "function": "handle",
-            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
-            "line": 29,
-            "function": "call_user_func_array"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
-            "line": 87,
-            "function": "Illuminate\\Container\\{closure}",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
-            "line": 31,
-            "function": "callBoundMethod",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php",
-            "line": 549,
-            "function": "call",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
-            "line": 180,
-            "function": "call",
-            "class": "Illuminate\\Container\\Container",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/symfony\/console\/Command\/Command.php",
-            "line": 262,
-            "function": "execute",
-            "class": "Illuminate\\Console\\Command",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
-            "line": 167,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Command\\Command",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/symfony\/console\/Application.php",
-            "line": 888,
-            "function": "run",
-            "class": "Illuminate\\Console\\Command",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/symfony\/console\/Application.php",
-            "line": 224,
-            "function": "doRunCommand",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/symfony\/console\/Application.php",
-            "line": 125,
-            "function": "doRun",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php",
-            "line": 88,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php",
-            "line": 121,
-            "function": "run",
-            "class": "Illuminate\\Console\\Application",
-            "type": "->"
-        },
-        {
-            "file": "\/Applications\/XAMPP\/xamppfiles\/htdocs\/readhunt\/artisan",
-            "line": 37,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Console\\Kernel",
-            "type": "->"
-        }
-    ]
-}
+null
 ```
 
 ### HTTP Request
@@ -2624,7 +2264,7 @@ $.ajax(settings).done(function (response) {
 
 Manage API Users
 <!-- START_b2892eb191cd19c0a6f1aae56ba43db4 -->
-## Display a listing of the resource.
+## Display authenticated user
 
 > Example request:
 
@@ -2653,17 +2293,8 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "error": false,
-    "msg": "All the users",
-    "data": [
-        {
-            "id": 1,
-            "name": "Vitor Amaral",
-            "email": "amaralvitor@ua.pt",
-            "created_at": "2017-10-31 19:52:34",
-            "updated_at": "2017-10-31 19:52:34"
-        }
-    ]
+    "error": true,
+    "msg": "User not found"
 }
 ```
 
@@ -2718,17 +2349,13 @@ $.ajax(settings).done(function (response) {
 <!-- END_b77cc60ec781668eff0888aa705fd258 -->
 
 <!-- START_96b8840d06e94c53a87e83e9edfb44eb -->
-## Store a newly created resource in storage.
+## Store a new created user in database.
 
 > Example request:
 
 ```bash
 curl -X POST "http://localhost/api/v1/user" \
--H "Accept: application/json" \
-    -d "name"="qui" \
-    -d "email"="muller.ocie@example.org" \
-    -d "password"="qui" \
-
+-H "Accept: application/json"
 ```
 
 ```javascript
@@ -2737,11 +2364,6 @@ var settings = {
     "crossDomain": true,
     "url": "http://localhost/api/v1/user",
     "method": "POST",
-    "data": {
-        "name": "qui",
-        "email": "muller.ocie@example.org",
-        "password": "qui"
-},
     "headers": {
         "accept": "application/json"
     }
@@ -2756,18 +2378,11 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/user`
 
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    name | string |  required  | Maximum: `20` Minimum: `5`
-    email | email |  required  | Maximum: `150`
-    password | string |  required  | Minimum: `10` Required if the parameters `email` are present.
 
 <!-- END_96b8840d06e94c53a87e83e9edfb44eb -->
 
 <!-- START_eda2b3d78b052ccb36bffab3b344d72a -->
-## Display the specified resource.
+## Display the specified user by ID.
 
 > Example request:
 
@@ -2851,7 +2466,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_f5dcd1a863721e6fed25439283ccab97 -->
 
 <!-- START_1006d782d67bb58039bde349972eb2f0 -->
-## Update the specified resource in storage.
+## Update the specified User by ID  in database.
 
 > Example request:
 
@@ -2886,7 +2501,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_1006d782d67bb58039bde349972eb2f0 -->
 
 <!-- START_a5d7655acadc1b6c97d48e68f1e87be9 -->
-## Remove the specified resource from storage.
+## Remove the specified user from database.
 
 > Example request:
 
@@ -2919,7 +2534,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_a5d7655acadc1b6c97d48e68f1e87be9 -->
 
 <!-- START_28e685420b0e7112e74031353ec2f4bd -->
-## Display a listing of the resource.
+## Display authenticated user
 
 > Example request:
 
@@ -2959,6 +2574,90 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_28e685420b0e7112e74031353ec2f4bd -->
+
+<!-- START_080f3ecebb7bcc2f93284b8f5ae1ac3b -->
+## Display all the users.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/users" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/users",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/users`
+
+`HEAD api/v1/users`
+
+
+<!-- END_080f3ecebb7bcc2f93284b8f5ae1ac3b -->
+
+<!-- START_22ba240a1327a1fb6d066233c0b1df10 -->
+## Show the user permissions.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/v1/me/permissions" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v1/me/permissions",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/v1/me/permissions`
+
+`HEAD api/v1/me/permissions`
+
+
+<!-- END_22ba240a1327a1fb6d066233c0b1df10 -->
 
 #Vote
 

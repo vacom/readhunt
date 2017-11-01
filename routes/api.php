@@ -25,8 +25,12 @@ use Illuminate\Http\Request;
 
 //Private routes, only for authenticated users
 Route::group(array('prefix' => '/v1', 'middleware' => 'auth:api'), function () {
+    //User
     Route::resource('user', 'UserController');
     Route::get('/me', 'UserController@index');
+    Route::get('/users', 'UserController@all');
+    Route::get('/me/permissions', 'UserController@permissions');
+    //Article
     Route::resource('article', 'ArticleController');
     Route::resource('category', 'CategoryController');
     Route::resource('comment', 'CommentController');
@@ -37,6 +41,8 @@ Route::group(array('prefix' => '/v1', 'middleware' => 'auth:api'), function () {
 
 //public routes, everyone has access
 Route::group(array('prefix' => '/v1'), function (){
+    //User
+    Route::post('/user', 'UserController@store');
     //Articles
     Route::get('/articles', 'ArticleController@index');
     Route::get('/article/{article}', 'ArticleController@show');
@@ -45,10 +51,14 @@ Route::group(array('prefix' => '/v1'), function (){
     Route::get('/category/{category}', 'CategoryController@show');
     //Comments
     Route::get('/comments/{article_id}', 'CommentController@index');
+    Route::get('/comments/count/{article_id}', 'CommentController@count');
+    Route::get('/comment/{comment}', 'CommentController@show');
     //Profile
     Route::get('/profile/{profile}', 'ProfileController@show');
     //Votes
-    Route::get('/votes/count/{article_id}', 'VoteController@show');
+    Route::get('/votes/{article_id}', 'VoteController@index');
+    Route::get('/votes/count/{article_id}', 'VoteController@count');
+    Route::get('/vote/{vote}', 'VoteController@show');
     //Search
     Route::get('/search/{terms}', 'SearchController@index');
     //Route::resource('search', 'SearchController');
