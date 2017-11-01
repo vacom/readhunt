@@ -26,7 +26,7 @@ class VoteController extends Controller
     public function index($article_id)
     {
         if($article_id){
-            $results = DB::select('SELECT votes.voted, users.name, articles.title FROM votes
+            $results = DB::select('SELECT votes.id, votes.voted, users.name as author, articles.title FROM votes
                                     INNER JOIN users ON votes.user_id = users.id
                                     INNER JOIN articles ON votes.article_id = articles.id
                                     WHERE votes.article_id = ? ORDER BY votes.created_at DESC;', [$article_id]);
@@ -100,8 +100,8 @@ class VoteController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'voted' => 'required|bool',
-            'user_id' => 'unique:profiles|required|integer',
-            'article_id' => 'unique:articles|required|integer',
+            'user_id' => 'required|integer',
+            'article_id' => 'required|integer',
         ]);
 
         if ($validator->fails()) {
@@ -176,8 +176,8 @@ class VoteController extends Controller
         if($vote->user_id === Auth::id()){
             $validator = Validator::make($request->all(), [
                 'voted' => 'required|bool',
-                'user_id' => 'unique:profiles|required|integer',
-                'article_id' => 'unique:articles|required|integer',
+                'user_id' => 'required|integer',
+                'article_id' => 'required|integer',
             ]);
 
             if ($validator->fails()) {

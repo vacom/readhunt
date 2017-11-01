@@ -46,6 +46,7 @@ Route::group(array('prefix' => '/v1'), function (){
     //Articles
     Route::get('/articles', 'ArticleController@index');
     Route::get('/article/{article}', 'ArticleController@show');
+    Route::get('/articles/{start?}/{end?}', 'ArticleController@dates');
     //Categories
     Route::get('/categories', 'CategoryController@index');
     Route::get('/category/{category}', 'CategoryController@show');
@@ -60,7 +61,10 @@ Route::group(array('prefix' => '/v1'), function (){
     Route::get('/votes/count/{article_id}', 'VoteController@count');
     Route::get('/vote/{vote}', 'VoteController@show');
     //Search
-    Route::get('/search/{terms}', 'SearchController@index');
+    Route::get('/search/{keywords}', 'SearchController@index');
     //Route::resource('search', 'SearchController');
+    //Suggestion
+    Route::get('/suggestions', 'SuggestionController@index');
+    Route::get('/suggestions/votes/{filter}', 'SuggestionController@votes');
 });
 

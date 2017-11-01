@@ -25,7 +25,7 @@ class CommentController extends Controller
     public function index($article_id)
     {
         if($article_id){
-            $results = DB::select('SELECT comments.id, content, users.name, profiles.avatar_url, users.created_at FROM comments
+            $results = DB::select('SELECT comments.id, content, users.name as author, profiles.avatar_url, users.created_at FROM comments
                                 INNER JOIN users ON comments.user_id = users.id
                                 INNER JOIN profiles ON users.id = profiles.user_id
                                 WHERE article_id = ? ORDER BY created_at DESC', [$article_id]);

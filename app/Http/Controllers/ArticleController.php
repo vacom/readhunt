@@ -6,6 +6,7 @@ use App\Article;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -35,6 +36,40 @@ class ArticleController extends Controller
             return response(array(
                 'error' => true,
                 'msg' => 'Articles not found',
+            ), 404);
+        }
+    }
+
+    /**
+     * Display all the articles between two dates
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dates($start, $end)
+    {
+        if($start && $end){
+            $results = DB::select("SELECT a.id, a.title, a.tagline, a.description, a.link, a.thumbnail_url, a.cover_url, u.name as author, c.content as category, a.created_at
+                                    FROM articles as a
+                                    INNER JOIN users as u ON a.user_id = u.id
+                                    INNER JOIN categories as c ON a.category_id = c.id
+                                    WHERE a.created_at BETWEEN ? AND ?;", [$start, $end]);
+
+            if($results){
+                return response(array(
+                    'error' => false,
+                    'msg' => 'All articles found on these dates',
+                    'data' => $results
+                ), 200);
+            }else{
+                return response(array(
+                    'error' => true,
+                    'msg' => 'No items found on these dates',
+                ), 404);
+            }
+        }else{
+            return response(array(
+                'error' => true,
+                'msg' => 'You need to enter dates to find articles',
             ), 404);
         }
     }

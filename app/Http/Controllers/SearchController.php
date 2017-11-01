@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Search;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @resource Search
@@ -19,9 +20,33 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($keywords)
     {
-        //
+        if($keywords){
+            $results = DB::select("SELECT a.id, a.title, a.tagline, a.thumbnail_url, a.link, u.name as author, c.content as category
+                                    FROM articles AS a
+                                    INNER JOIN users as u ON a.user_id = u.id
+                                    INNER JOIN categories as c ON a.category_id = c.id
+                                    WHERE a.title LIKE ?", ["%$keywords%"]);
+
+            if($results){
+                return response(array(
+                    'error' => false,
+                    'msg' => 'All the search found',
+                    'data' => $results
+                ), 200);
+            }else{
+                return response(array(
+                    'error' => true,
+                    'msg' => 'Any article was not found in this search',
+                ), 404);
+            }
+        }else{
+            return response(array(
+                'error' => true,
+                'msg' => 'You need keys words to search something',
+            ), 404);
+        }
     }
 
     /**
@@ -42,7 +67,10 @@ class SearchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return response(array(
+            'error' => true,
+            'msg' => 'You don´t have permissions to this endpoint',
+        ), 403);
     }
 
     /**
@@ -53,7 +81,10 @@ class SearchController extends Controller
      */
     public function show(Search $search)
     {
-        //
+        return response(array(
+            'error' => true,
+            'msg' => 'You don´t have permissions to this endpoint',
+        ), 403);
     }
 
     /**
@@ -76,7 +107,10 @@ class SearchController extends Controller
      */
     public function update(Request $request, Search $search)
     {
-        //
+        return response(array(
+            'error' => true,
+            'msg' => 'You don´t have permissions to this endpoint',
+        ), 403);
     }
 
     /**
@@ -87,6 +121,9 @@ class SearchController extends Controller
      */
     public function destroy(Search $search)
     {
-        //
+        return response(array(
+            'error' => true,
+            'msg' => 'You don´t have permissions to this endpoint',
+        ), 403);
     }
 }
